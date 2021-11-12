@@ -1,16 +1,22 @@
 {
   "development": {
-    "database": "express_auth_development",
+    "username": "postgres",
+    "password": "newPassword",
+    "database": "places_app_development",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "database": "express_auth_test",
+    "username": "postgres",
+    "password": "newPassword",
+    "database": "places_app_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "database": "express_auth_production",
+    "username": "postgres",
+    "password": "newPassword",
+    "database": "places_app_production",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
