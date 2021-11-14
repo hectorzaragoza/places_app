@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--This is the CDN link for mapbox and the necessary css stylesheet to make
+    popups and markers work-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.css' rel='stylesheet' />
     <title>Express Auth</title>
 </head>
 <body>
@@ -22,6 +26,7 @@
           </nav>
     </header>
     <%- include('partials/alerts') %>
-    <%- body %> 
+    <%- body %>
+    <script src="/views/main.ejs"></script>
 </body>
 </html>

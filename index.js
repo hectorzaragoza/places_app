@@ -41,6 +41,8 @@ app.use((req, res, next) => {
 // controllers middleware 
 app.use('/auth', require('./controllers/auth'))
 
+//added to troubleshoot login redirect
+app.use('/main', require('./controllers/main'))
 
 // home route
 app.get('/', (req, res)=>{
@@ -50,6 +52,11 @@ app.get('/', (req, res)=>{
 // profile route
 app.get('/profile', isLoggedIn, (req, res)=>{
     res.render('profile')
+})
+
+//added to troubleshoot login redirect
+app.get('/main', isLoggedIn, (req, res) => {
+    res.render('main')
 })
 
 
