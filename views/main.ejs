@@ -1,23 +1,37 @@
-<h1>This is where the map and button will go</h1>
 
-<!-- <%- mapboxgl.accessToken = 'pk.eyJ1IjoicGxhY2VzLWFwcCIsImEiOiJja3Z2NWFrc3MzeW1vMm9tdGJtM3BlcjVqIn0.1z5SvQW8vrbUnxRBelWG1Q' %>
+<h1>This is your map:</h1>
+<div id='map' style='width: 400px; height: 300px;'></div>
+<script>
 
-<%- let userLong = '' %>
-<%- let userLat = '' %>
+document.addEventListener('DOMContentLoaded', () => {
+        //My MapBox Api.
+        mapboxgl.accessToken = 'pk.eyJ1IjoicGxhY2VzLWFwcCIsImEiOiJja3Z2NWdidXpienpyMnZwZ3VtYXA5ZzZ3In0.xPD6PBPl3J-fosIjAtzYSQ';
+        
+        //Geolocation API to get user Location
+        navigator.geolocation.getCurrentPosition(position => {
+        let userLong = position.coords.longitude
+        let userLat = position.coords.latitude
+        let userLocation = [userLong, userLat]
+        console.log('This is the api response to my geolocation: ', userLocation)
+        
+        //Rendering map on site
+        const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: userLocation, // starting position [lng, lat]
+        zoom: 13 // starting zoom
+        })
 
-<%- document.addEventListener('DOMContentLoaded', () => { %>
-    <%- navigator.geolocation.getCurrentPosition(position => { %>
-    <%-   let userLong = position.coords.longitude %>
-    <%-   let userLat = position.coords.latitude %>
-    <%-   let userLocation = [userLong, userLat] %>
+        //Marker on Map on User Location
+        const marker = new mapboxgl.Marker({
+            color: "blue"
+        }).setLngLat(userLocation).addTo(map)
 
-    <%-    const map = new mapboxgl.Map({ %>
-    <%-    container: 'map', %>
-    <%-    style: 'mapbox://styles/mapbox/streets-v11',  %>
-    <%-    center: userLocation, %>
-    <%-    zoom: 16%>
-    <%-    }) %>
-    <%- }) %>
-<%- }) %> -->
+        //Popup at User Location
+        const popup = new mapboxgl.Popup()
+        .setLngLat(userLocation)
+        .addTo(map)
+    });
+})
 
-<div id='map' style='width: 400px; height: 300px;'>sdaf</div>
+</script>

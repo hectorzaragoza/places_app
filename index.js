@@ -7,8 +7,6 @@ const passport = require('./config/ppConfig')
 const flash = require('connect-flash')
 const isLoggedIn = require('./middleware/isLoggedIn')
 
-
-
 // views (ejs and layouts) set up
 app.set('view engine', 'ejs')
 app.use(ejsLayouts)
