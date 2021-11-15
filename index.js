@@ -53,12 +53,11 @@ app.get('/profile', isLoggedIn, (req, res)=>{
 })
 
 //added to troubleshoot login redirect
-app.get('/main', isLoggedIn, (req, res) => {
-    res.render('main')
-})
+// app.get('/main', isLoggedIn, (req, res) => {
+//     res.render('main')
+// })
 
 
 app.listen(3000, ()=>{
-    console.log(`process.env.SUPER_SECRET_SECRET ${process.env.SUPER_SECRET_SECRET}`)
-    console.log("auth_practice running on port 3000")
+    console.log('App running')
 })
