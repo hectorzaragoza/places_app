@@ -52,11 +52,6 @@ app.get('/profile', isLoggedIn, (req, res)=>{
     res.render('profile')
 })
 
-//added to troubleshoot login redirect
-// app.get('/main', isLoggedIn, (req, res) => {
-//     res.render('main')
-// })
-
 
 app.listen(3000, ()=>{
     console.log('App running')

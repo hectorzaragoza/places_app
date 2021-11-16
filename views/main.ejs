@@ -1,7 +1,9 @@
 
 <h1>This is your map:</h1>
 <div id='map' style='width: 400px; height: 300px;'></div>
-
+<p> <%= apiResponse.data.features[0].place_name %> </p>
+<p> <%= apiResponse.data.features[0].center[0] %> </p>
+<p> <%= apiResponse.data.features[0].center[1] %> </p>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -28,6 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const popup = new mapboxgl.Popup()
         .setLngLat(userLocation)
         .addTo(map)
-    });
+        });
 })
 </script>
