@@ -24,5 +24,9 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/addplace', (req, res) => {
+    res.render('addplace')
+})
+
 
 module.exports = router

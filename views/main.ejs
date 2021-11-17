@@ -1,9 +1,12 @@
 
-<h1>This is your map:</h1>
+<h1>Welcome home:</h1>
 <div id='map' style='width: 400px; height: 300px;'></div>
 <p> <%= apiResponse.data.features[0].place_name %> </p>
 <p> <%= apiResponse.data.features[0].center[0] %> </p>
 <p> <%= apiResponse.data.features[0].center[1] %> </p>
+
+<a href="/main/addplace"><button>Add a Place</button></a>
+<a href="/profile"><button>View Places</button></a>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {

@@ -38,9 +38,12 @@ app.use((req, res, next) => {
 
 // controllers middleware 
 app.use('/auth', require('./controllers/auth'))
-
 //added to troubleshoot login redirect
 app.use('/main', require('./controllers/main'))
+//controller for add place view
+app.use('/addplace', require('./controllers/main'))
+//controller for comment view
+app.use('/comment', require('./controllers/comment'))
 
 // home route
 app.get('/', (req, res)=>{
