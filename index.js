@@ -6,6 +6,7 @@ const session = require('express-session')
 const passport = require('./config/ppConfig')
 const flash = require('connect-flash')
 const isLoggedIn = require('./middleware/isLoggedIn')
+const db = require('./models')
 //adding method override which allows you to override methods with a query parameter
 const methodOverride = require('method-override')
 
@@ -51,14 +52,14 @@ app.use('/addplace', require('./controllers/main'))
 //controller for comment view
 app.use('/comment', require('./controllers/comment'))
 
+//controller for profile route
+app.get('/profile', isLoggedIn, (req, res)=>{
+    res.render('profile')
+})
+
 // home route
 app.get('/', (req, res)=>{
     res.render('home')
-})
-
-// profile route
-app.get('/profile', isLoggedIn, (req, res)=>{
-    res.render('profile')
 })
 
 

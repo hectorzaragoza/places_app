@@ -119,6 +119,6 @@ In designing and building your project, you will start by forking and cloneing t
 
 
 
-<p> <%= apiResponse.data.features[0].place_name %> </p>
-<p> <%= apiResponse.data.features[0].center[0] %> </p>
-<p> <%= apiResponse.data.features[0].center[1] %> </p>
+apiResponse.data.features[0].place_name
+apiResponse.data.features[0].center[0]
+apiResponse.data.features[0].center[1]

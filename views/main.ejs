@@ -1,6 +1,6 @@
 
 <h1>Welcome home:</h1>
-<div id='map' style='width: 400px; height: 300px;'></div>
+<div id='map' style='width: 600px; height: 500px;'></div>
 
 
 <a href="/main/addplace"><button>Add a Place</button></a>
@@ -24,13 +24,19 @@ document.addEventListener('DOMContentLoaded', () => {
         zoom: 13 // starting zoom
         })
         //Marker on Map on User Location
-        const marker = new mapboxgl.Marker({
-            color: "blue"
+        // const marker = new mapboxgl.Marker({
+        //     color: "blue"
+        // }).setLngLat(userLocation).addTo(map)
+
+        //Create a new marker and pull data for userlocation from database
+        const newMarker = new mapboxgl.Marker({
+            color: "red"
         }).setLngLat(userLocation).addTo(map)
+
         //Popup at User Location
-        const popup = new mapboxgl.Popup()
-        .setLngLat(userLocation)
-        .addTo(map)
+        // const popup = new mapboxgl.Popup()
+        // .setLngLat(userLocation)
+        // .addTo(map)
         });
 })
 </script>
