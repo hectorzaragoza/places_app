@@ -51,11 +51,9 @@ app.use('/main', require('./controllers/main'))
 app.use('/addplace', require('./controllers/main'))
 //controller for comment view
 app.use('/comment', require('./controllers/comment'))
+//controller for profile view
+app.use('/profile', require('./controllers/profile'))
 
-//controller for profile route
-app.get('/profile', isLoggedIn, (req, res)=>{
-    res.render('profile')
-})
 
 // home route
 app.get('/', (req, res)=>{
