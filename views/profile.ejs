@@ -1,4 +1,18 @@
 
 <h2><%= userName %>'s Profile</h2>
 
-<h3>List of saved places will go here</h3>
+<h2>Here's a list of your saved places!</h3>
+
+<% foundData.forEach((item) => { %>
+    <h3>Place Name: <a href=""> <%= item.name %> </a> </h3>
+    <h4>Category: <%= item.category %> </h4>
+    <h4>Review: <%= item.review %> </h4>
+    <p> <small> <%= item.createdAt %> </small> </p>
+    <p> <small> <%= item.placeName%> </small> </p>
+    <button>Comment</button></a>
+    <button>Delete</button>
+<% }) %>
+
+
+
+
