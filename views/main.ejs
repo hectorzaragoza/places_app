@@ -7,7 +7,13 @@
 <a href="/profile"><button>View Places</button></a>
 
 <script>
+const existingPlace = <%- JSON.stringify(existingPlaceData) %>
+console.log(existingPlace)
+</script>
+
+<script>
 document.addEventListener('DOMContentLoaded', () => {
+
         //My MapBox Api.
         mapboxgl.accessToken = 'pk.eyJ1IjoicGxhY2VzLWFwcCIsImEiOiJja3Z2NWdidXpienpyMnZwZ3VtYXA5ZzZ3In0.xPD6PBPl3J-fosIjAtzYSQ'
         //Geolocation API to get user Location
@@ -28,10 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "blue"
         }).setLngLat(userLocation).addTo(map)
         //Create a new marker and pull data for userlocation from database
-        existingPlaceData.forEach(savedPlace => {
+        existingPlace.forEach(savedPlace => {
+            console.log('Im in')
             const newMarker = new mapboxgl.Marker({
             color: "red"
-        }).setLngLat().addTo(map)
+            }).setLngLat([savedPlace.long, savedPlace.lat]).addTo(map)
         })
         //Popup at User Location
         // const popup = new mapboxgl.Popup()
