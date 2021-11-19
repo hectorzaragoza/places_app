@@ -5,9 +5,10 @@ const router = express.Router()
 router.get('/:id', (req, res) => {
     db.marker.findAll({
         where: {id: req.params.id},
-        include: [db.comment]
+        include: [db.user, db.comment]
     })
     .then(placeDetail => {
+        console.log('This is where the comment should also be available: ', placeDetail)
         res.render('comment', {placeDetail})
     })
 })
@@ -15,7 +16,6 @@ router.get('/:id', (req, res) => {
 router.post('/:id/comments', (req, res) => {
     let formName = req.body.name
     let formComment = req.body.comment
-    console.log('This is the id for this place: ', req.params.id)
     db.comment.create({
         name: formName,
         comment: formComment,
@@ -23,13 +23,7 @@ router.post('/:id/comments', (req, res) => {
         markerId: req.params.id    
     })
     .then(createdComment => {
-        console.log ('This is the created content: ', createdComment)
-        db.marker.findAll({
-            where: {id: req.params.id}
-        })
-        .then(placeDetail => {
-            res.render('comment', {placeDetail, createdComment})
-        })
+        res.redirect('/comment')
     })
 })
 
