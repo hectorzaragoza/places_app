@@ -12,6 +12,9 @@ router.get('/', (req, res) => {
     .then(existingPlaceData => {
         res.render('main', {existingPlaceData})
     })
+    .catch(error => {
+        console.error
+    })
 })
 
 //Get Method that renders the add place page with the form
