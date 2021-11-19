@@ -24,15 +24,15 @@ document.addEventListener('DOMContentLoaded', () => {
         zoom: 13 // starting zoom
         })
         //Marker on Map on User Location
-        // const marker = new mapboxgl.Marker({
-        //     color: "blue"
-        // }).setLngLat(userLocation).addTo(map)
-
-        //Create a new marker and pull data for userlocation from database
-        const newMarker = new mapboxgl.Marker({
-            color: "red"
+        const marker = new mapboxgl.Marker({
+            color: "blue"
         }).setLngLat(userLocation).addTo(map)
-
+        //Create a new marker and pull data for userlocation from database
+        existingPlaceData.forEach(savedPlace => {
+            const newMarker = new mapboxgl.Marker({
+            color: "red"
+        }).setLngLat().addTo(map)
+        })
         //Popup at User Location
         // const popup = new mapboxgl.Popup()
         // .setLngLat(userLocation)

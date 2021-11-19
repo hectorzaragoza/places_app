@@ -8,10 +8,11 @@ const db = require('../models')
 //Get Method that renders the Main page
 //Will need to add db route to get records of places to render on map
 router.get('/', (req, res) => {
-    res.render('main')
+    db.marker.findAll()
+    .then(existingPlaceData => {
+        res.render('main', {existingPlaceData})
+    })
 })
-
-
 
 //Get Method that renders the add place page with the form
 router.get('/addplace', (req, res) => {
