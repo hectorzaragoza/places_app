@@ -12,7 +12,7 @@ router.get('/:id', (req, res) => {
     })
 })
 
-router.post('/:id/comments', (req, res) => {
+router.post('/:id', (req, res) => {
     let formName = req.body.name
     let formComment = req.body.comment
     db.comment.create({
@@ -22,7 +22,8 @@ router.post('/:id/comments', (req, res) => {
         markerId: req.params.id    
     })
     .then(createdComment => {
-        res.redirect('/comment')
+        console.log('This is the created comment: ', createdComment)
+        res.redirect(`/comment/${createdComment.markerId}`)
     })
 })
 

@@ -6,13 +6,11 @@
 <a href="/main/addplace"><button>Add a Place</button></a>
 <a href="/profile"><button>View Places</button></a>
 
-<script>
-const existingPlace = <%- JSON.stringify(existingPlaceData) %>
-</script>
+
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-
+        const existingPlace = <%- JSON.stringify(existingPlaceData) %>
         //My MapBox Api.
         mapboxgl.accessToken = 'pk.eyJ1IjoicGxhY2VzLWFwcCIsImEiOiJja3Z2NWdidXpienpyMnZwZ3VtYXA5ZzZ3In0.xPD6PBPl3J-fosIjAtzYSQ'
         //Geolocation API to get user Location

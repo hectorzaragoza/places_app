@@ -10,6 +10,7 @@ const db = require('./models')
 //adding method override which allows you to override methods with a query parameter
 const methodOverride = require('method-override')
 
+app.use(methodOverride('_method'))
 // views (ejs and layouts) set up
 app.set('view engine', 'ejs')
 app.use(ejsLayouts)

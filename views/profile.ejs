@@ -10,14 +10,11 @@
     <p> <small> <%= item.createdAt %> </small> </p>
     <p> <small> <%= item.placeName%> </small> </p>
     <a href="/comment/<%= item.id %>"><button>Comment</button></a>
+    <a href="/profile/edit/<%= item.id %>"><button>Edit</button></a>
     <form action="/profile/<%= item.id %>/?_method=DELETE" method="POST">
         <input type="submit" value="Delete">
     </form>
-    <form action="/edit/<%= item.id %>/?_method=PUT" method="POST">
-        <label for="placeReview">Edit: </label>
-        <input type="text" id="placeReview" name="review" value="<%= item.review %>">
-        <input type="submit" value="Update your Place Review">
-    </form>
+    
 <% }) %>
 
 
