@@ -8,7 +8,6 @@ router.get('/:id', (req, res) => {
         include: [db.user, db.comment]
     })
     .then(placeDetail => {
-        console.log('This is where the comment should also be available: ', placeDetail)
         res.render('comment', {placeDetail})
     })
 })

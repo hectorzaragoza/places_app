@@ -8,7 +8,6 @@
 
 <script>
 const existingPlace = <%- JSON.stringify(existingPlaceData) %>
-console.log(existingPlace)
 </script>
 
 <script>
@@ -35,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }).setLngLat(userLocation).addTo(map)
         //Create a new marker and pull data for userlocation from database
         existingPlace.forEach(savedPlace => {
-            console.log('Im in')
+            console.log('Im in', existingPlace)
             const newMarker = new mapboxgl.Marker({
             color: "red"
             }).setLngLat([savedPlace.long, savedPlace.lat]).addTo(map)

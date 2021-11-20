@@ -10,9 +10,6 @@ const db = require('../models')
 router.get('/', (req, res) => {
     db.marker.findAll()
     .then(existingPlaceData => {
-        console.log('This is the saved place data: ', existingPlaceData)
-        console.log('This is the longitude: ', existingPlaceData[0].long)
-        console.log('This is the latitude: ', existingPlaceData[0].lat)
         res.render('main', {existingPlaceData})
     })
     .catch(error => {
@@ -59,7 +56,7 @@ router.post('/addplace', (req, res) => {
             lat: apiResponse.data.features[0].center[1]
         })
         .then(createdUser => {
-            console.log(createdUser)
+
         })
         res.render('main')
     })
