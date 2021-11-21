@@ -56,9 +56,9 @@ router.post('/addplace', (req, res) => {
             lat: apiResponse.data.features[0].center[1]
         })
         .then(createdUser => {
-
+            res.redirect('/main')
         })
-        res.render('main')
+        
     })
     .catch(error => {
         console.log(error)
