@@ -26,21 +26,33 @@ document.addEventListener('DOMContentLoaded', () => {
         center: userLocation, // starting position [lng, lat]
         zoom: 13 // starting zoom
         })
+        
+         //Testing out popup
+        const popup = new mapboxgl.Popup(
+        )
+        .setText(`Home Coordinates: ${userLocation}`)
         //Marker on Map on User Location
         const marker = new mapboxgl.Marker({
             color: "blue"
-        }).setLngLat(userLocation).addTo(map)
+        }).setLngLat(userLocation)
+        .setPopup(popup)
+        .addTo(map)
+
         //Create a new marker and pull data for userlocation from database
         existingPlace.forEach(savedPlace => {
             console.log('Im in', existingPlace)
+
+            //Popup at addedPlace
+            const popup = new mapboxgl.Popup()
+            .setText(`Name: ${savedPlace.name}, Category: ${savedPlace.category}, Review: ${savedPlace.review}`)
+
             const newMarker = new mapboxgl.Marker({
             color: "red"
-            }).setLngLat([savedPlace.long, savedPlace.lat]).addTo(map)
+            })
+            .setLngLat([savedPlace.long, savedPlace.lat])
+            .setPopup(popup)
+            .addTo(map)
         })
-        //Popup at User Location
-        // const popup = new mapboxgl.Popup()
-        // .setLngLat(userLocation)
-        // .addTo(map)
         });
 })
 </script>
