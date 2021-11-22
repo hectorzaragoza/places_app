@@ -9,10 +9,10 @@ up: async (queryInterface, Sequelize) => {
         type: Sequelize.INTEGER
     },
     name: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
     },
     comment: {
-        type: Sequelize.INTEGER
+        type: Sequelize.TEXT
     },
     userId: {
         type: Sequelize.INTEGER
