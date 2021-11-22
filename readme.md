@@ -3,6 +3,8 @@
 
 One stop shop to see the places YOU and your FRIENDS have been to - helping you make the daily choice to discover new places.
 
+For Live Site, Visit: https://placesforus.herokuapp.com/
+
 <img src="./assets/img/exploreImg.jpg">
 
 
