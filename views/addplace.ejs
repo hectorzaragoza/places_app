@@ -1,5 +1,7 @@
-<h2>Create a New Place</h2>
-<form action="/main/addplace" method="POST">
+<link rel="stylesheet" href="/static/css/style.css">
+
+<h2 class="createClassHeading">Create a New Place</h2>
+<form class="addPlaceForm" action="/main/addplace" method="POST">
     <div class="form-group">
         <label for="name">Place Name: </label>
         <input type="text" name="name" class="form-control" id="name">
@@ -32,5 +34,5 @@
         <label for="review">Review: </label>
         <input type="text" name="review" class="form-control" id="review">
     </div>
-    <input type="submit">
+    <input class="addPlaceSubmit" type="submit">
 </form>

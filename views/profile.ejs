@@ -1,7 +1,7 @@
 
-<h2><%= userName %>'s Profile</h2>
+<link rel="stylesheet" href="/static/css/style.css">
 
-<h2>Here's a list of your saved places!</h3>
+<h2 class="indexHeading">Here's a list of your saved places!</h3>
 
 <% foundData.forEach((item) => { %>
     <h3>Place Name: <a href="/comment/<%= item.id %>"> <%= item.name %> </a> </h3>
