@@ -2,10 +2,6 @@ body {
     background-color: lightblue;
 }
 
-.active {
-    background-color: #04AA6D;
-}
-
 .navbar {
     list-style-type: none;
     margin: 0;
@@ -33,6 +29,7 @@ body {
 .appName {
     text-align: center;
     color: whitesmoke;
+    padding-top: 1.5rem;
 }
 
 .navContainer {
@@ -67,4 +64,22 @@ body {
 
 .form-group {
     margin: 1.2rem;
+}
+
+.savedPlaceContainer {
+    margin: 1.5rem 0 2rem 2rem;
+    background-color: whitesmoke;
+    width: 60%;
+    border-radius: 1rem;
+    padding: 1rem;
+    padding-top: 1px;
+}
+
+.profileButtons {
+    display: inline;
+    margin: 0 10px 0 10px;
+}
+
+.addPlaceBtnContainer {
+    text-align: center;
 }
