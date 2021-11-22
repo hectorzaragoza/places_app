@@ -21,8 +21,8 @@ module.exports = (sequelize, DataTypes) => {
     review: DataTypes.TEXT,
     createdAt: {type: DataTypes.DATEONLY, allowNull: false, defaultValue: DataTypes.NOW},
     placeName: DataTypes.STRING,
-    lat: DataTypes.DECIMAL(10,8),
-    long: DataTypes.DECIMAL(11,8)
+    lat: DataTypes.FLOAT,
+    long: DataTypes.FLOAT
   }, {
     sequelize,
     modelName: 'marker',
