@@ -10,6 +10,9 @@ router.get('/:id', (req, res) => {
     .then(placeDetail => {
         res.render('comment', {placeDetail})
     })
+    .catch(error => {
+        console.error
+    })
 })
 
 router.post('/:id', (req, res) => {
@@ -24,6 +27,9 @@ router.post('/:id', (req, res) => {
     .then(createdComment => {
         console.log('This is the created comment: ', createdComment)
         res.redirect(`/comment/${createdComment.markerId}`)
+    })
+    .catch(error => {
+        console.error
     })
 })
 
