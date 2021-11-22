@@ -33,7 +33,7 @@ body {
 }
 
 .navContainer {
-    background-color: darkolivegreen;
+    background-color: lightslategray;
 }
 
 .addViewLinksContainer {
@@ -67,9 +67,10 @@ body {
 }
 
 .savedPlaceContainer {
-    margin: 1.5rem 0 2rem 2rem;
+    text-align: center;
+    margin: 1.5rem 0 2rem 21rem;
     background-color: whitesmoke;
-    width: 60%;
+    width: 50%;
     border-radius: 1rem;
     padding: 1rem;
     padding-top: 1px;
