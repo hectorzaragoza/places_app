@@ -3,7 +3,7 @@
 
 One stop shop to see the places YOU and your FRIENDS have been to - helping you make the daily choice to discover new places.
 
-<img src="./assets/img/exploreImg.jpg">
+<img src="assets/exploreImg.jpg">
 
 
 ## Idea:
@@ -25,9 +25,8 @@ The user will enter an address to request coordinates from the MapBox Geocoding 
 
 ## Wireframe and ERD:
 
-<img src="assets/img/wireFrames.JPG">
-<img src="assets/img/ERD.JPG">
-https://lucid.app/lucidchart/17d90f28-c2b1-4227-8aa9-671894a2e26a/edit?viewport_loc=-522%2C-1331%2C3840%2C1578%2C0_0&invitationId=inv_efa754df-04ca-454f-999a-5aceab927918
+<img src="assets/wireFrames.JPG">
+<img src="assets/ERD.JPG">
 
 ## Data:
 1. User (First Name, Last Name)
@@ -76,49 +75,13 @@ https://lucid.app/lucidchart/17d90f28-c2b1-4227-8aa9-671894a2e26a/edit?viewport_
 
 
 ## MapBox GL JS Successfal Map Integration with GeoLocation API:
-<img src="./assets/img/mbgljstest.JPG">
-<img src="assets/img/mbcodetest.JPG">
+<img src="assets/mbgljstest.JPG">
+<img src="assets/mbcodetest.JPG">
 
 
 ## MapBox Forward Geocoding API Success:
-<img src="assets/img/apiresponsetest.JPG">
+<img src="assets/apiresponsetest.JPG">
 
 
 ## MapBox Forward Geocoding API Response Object:
-<img src="assets/img/apiresponseobject.JPG">
-
-
-
-
-## Project 2 Pitch Guidelines
-
-In designing and building your project, you will start by forking and cloneing this repository, and then editing this README to include the following information: 
-1. Name of your app
-2. Tech stack you plan to use
-3. Simple wireframes
-     * Can be handdrawn, or with tool of your choice
-     * Example online tool: [Miro.com](https://miro.com/)
-5. API you plan to use
-6. ERD
-7. Example of how to call/invoke your API, and a description of what data comes back. 
-8. MVP goals (x3-5)
-9. Stretch goals (x2-5)
-10. Any potential roadblocks?
-
-## How to get started
-1. **Fork and clone this repository.**
-2. **Edit the text above to include specifics of your project.**
-3. **Commit, push, and submit a pull request to this repo with your edited pitch README.**
-4. *After you have met with a staff member and your pitch has been approved, suggested next steps:*
-      * Write out your routes and create a RESTful routing chart.
-      * Come up with a breakdown of what you plan to accomplish each day and how you are going to accomplish it.
-      * Create a new git repo for your project. 
-      * Make all test API calls you need to to ensure your API will be usable for this project. 
-      
-
-
-
-
-apiResponse.data.features[0].place_name
-apiResponse.data.features[0].center[0]
-apiResponse.data.features[0].center[1]
+<img src="assets/apiresponseobject.JPG">
