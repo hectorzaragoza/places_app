@@ -12,6 +12,9 @@ router.get('/', (req, res) => {
     .then(existingPlaceData => {
         res.render('main', {existingPlaceData})
     })
+    .catch(error => {
+        console.error
+    })
 })
 
 //Get Method that renders the add place page with the form
@@ -53,9 +56,9 @@ router.post('/addplace', (req, res) => {
             lat: apiResponse.data.features[0].center[1]
         })
         .then(createdUser => {
-            console.log(createdUser)
+            res.redirect('/main')
         })
-        res.render('main')
+        
     })
     .catch(error => {
         console.log(error)

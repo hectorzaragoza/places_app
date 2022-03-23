@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="/static/css/style.css">
+<h1>Let's edit the review for <em><%= placeToEdit[0].name %></em>: </h1>
+<h4>This is your current review:</h4>
+<h5> <%= placeToEdit[0].review %> </h5>
+
+
+<form action="/profile/edit/<%= placeToEdit[0].id %>/?_method=PUT" method="POST">
+    <label for="placeReview">Edit: </label>
+    <input type="text" id="placeReview" name="review" value="<%= placeToEdit[0].review %>">
+    <input type="submit" value="Update <%= placeToEdit[0].name %> Review">
+</form>

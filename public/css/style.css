@@ -1,0 +1,86 @@
+body {
+    background-color: lightblue;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.mainli {
+    display: inline;
+    margin: 1rem;
+}
+
+.alink {
+    color: whitesmoke;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.alink:hover {
+    background-color: #111;
+}
+
+.appName {
+    text-align: center;
+    color: whitesmoke;
+    padding-top: 1.5rem;
+}
+
+.navContainer {
+    background-color: lightslategray;
+}
+
+.addViewLinksContainer {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 1.25rem;
+}
+
+.addViewLinks {
+    padding: 1rem;
+}
+
+.indexHeading {
+    text-align: center;
+}
+
+.welcomeMessage {
+    text-align: center;
+}
+
+.createClassHeading {
+    text-align: center;
+}
+
+.addPlaceForm {
+    text-align: center;
+}
+
+.form-group {
+    margin: 1.2rem;
+}
+
+.savedPlaceContainer {
+    text-align: center;
+    margin: 1.5rem 0 2rem 21rem;
+    background-color: whitesmoke;
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1rem;
+    padding-top: 1px;
+}
+
+.profileButtons {
+    display: inline;
+    margin: 0 10px 0 10px;
+}
+
+.addPlaceBtnContainer {
+    text-align: center;
+}

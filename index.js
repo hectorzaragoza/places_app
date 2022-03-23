@@ -10,6 +10,10 @@ const db = require('./models')
 //adding method override which allows you to override methods with a query parameter
 const methodOverride = require('method-override')
 
+//middleware for CSS folder/file
+app.use('/static', express.static('public'))
+
+app.use(methodOverride('_method'))
 // views (ejs and layouts) set up
 app.set('view engine', 'ejs')
 app.use(ejsLayouts)
@@ -61,6 +65,6 @@ app.get('/', (req, res)=>{
 })
 
 
-app.listen(3000, ()=>{
+app.listen(process.env.PORT || 3000, ()=>{
     console.log('App running')
 })

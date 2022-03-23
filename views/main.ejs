@@ -1,13 +1,17 @@
+<link rel="stylesheet" href="/static/css/style.css">
+<h1 class="welcomeMessage">Welcome home:</h1>
 
-<h1>Welcome home:</h1>
-<div id='map' style='width: 600px; height: 500px;'></div>
+<div class="addViewLinksContainer">
+    <a class="addViewLinks" href="/main/addplace"><button>Add a Place</button></a>
+    <a class="addViewLinks" href="/profile"><button>View Places</button></a>
+</div>
+<div id='map' style='width: 100%; height: 500px;'></div>
 
 
-<a href="/main/addplace"><button>Add a Place</button></a>
-<a href="/profile"><button>View Places</button></a>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+        const existingPlace = <%- JSON.stringify(existingPlaceData) %>
         //My MapBox Api.
         mapboxgl.accessToken = 'pk.eyJ1IjoicGxhY2VzLWFwcCIsImEiOiJja3Z2NWdidXpienpyMnZwZ3VtYXA5ZzZ3In0.xPD6PBPl3J-fosIjAtzYSQ'
         //Geolocation API to get user Location
@@ -23,20 +27,33 @@ document.addEventListener('DOMContentLoaded', () => {
         center: userLocation, // starting position [lng, lat]
         zoom: 13 // starting zoom
         })
+        
+         //Testing out popup
+        const popup = new mapboxgl.Popup(
+        )
+        .setText(`Home Coordinates: ${userLocation}`)
         //Marker on Map on User Location
         const marker = new mapboxgl.Marker({
             color: "blue"
-        }).setLngLat(userLocation).addTo(map)
+        }).setLngLat(userLocation)
+        .setPopup(popup)
+        .addTo(map)
+
         //Create a new marker and pull data for userlocation from database
-        existingPlaceData.forEach(savedPlace => {
+        existingPlace.forEach(savedPlace => {
+            console.log('Im in', existingPlace)
+
+            //Popup at addedPlace
+            const popup = new mapboxgl.Popup()
+            .setText(`Name: ${savedPlace.name}, Category: ${savedPlace.category}, Review: ${savedPlace.review}`)
+
             const newMarker = new mapboxgl.Marker({
             color: "red"
-        }).setLngLat().addTo(map)
+            })
+            .setLngLat([savedPlace.long, savedPlace.lat])
+            .setPopup(popup)
+            .addTo(map)
         })
-        //Popup at User Location
-        // const popup = new mapboxgl.Popup()
-        // .setLngLat(userLocation)
-        // .addTo(map)
         });
 })
 </script>

@@ -6,22 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--This is the CDN link for mapbox and the necessary css stylesheet to make
     popups and markers work-->
+    <link rel="stylesheet" href="http://localhost:3000/css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.css' rel='stylesheet' />
-    <title>Express Auth</title>
+    <title>Places</title>
 </head>
 <body>
-    <header>
-        <h1>Places</h1>
+    <header class="navContainer">
+        <h1 class="appName">Places</h1>
         <nav>
-            <ul>
+            <ul class="navbar">
               <% if (!currentUser) { %>
-                <li><a href="/auth/signup">Signup</a></li>
-                <li><a href="/auth/login">Login</a></li>
+                <li class="mainli"><a class="alink" href="/auth/signup">Signup</a></li>
+                <li class="mainli"><a class="alink" href="/auth/login">Login</a></li>
               <% } else { %>
-                <li><a href="/auth/logout">Logout</a></li>
-                <li><a href="/profile">Profile</a></li>
-                <li><a href="/main">Home</a></li>
+                <li class="mainli"><a class="alink" href="/main">Home</a></li>
+                <li class="mainli"><a class="alink" href="/profile">Profile</a></li>
+                <li class="mainli"><a class="alink" href="/auth/logout">Logout</a></li>
               <% } %>
             </ul>
           </nav>

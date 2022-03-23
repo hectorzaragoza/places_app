@@ -1,10 +1,9 @@
 
 # Project 2 - "Places" - Full Stack PEN Application
 
-One stop shop to see the places YOU and your FRIENDS have been to - helping you make the daily choice to discover new places.
+One stop shop to see the places YOU have been to - helping you make the daily choice to discover new places.
 
 <img src="assets/exploreImg.jpg">
-
 
 ## Idea:
 
