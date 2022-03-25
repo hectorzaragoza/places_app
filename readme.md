@@ -1,26 +1,33 @@
 
 # "Places" - Full Stack PEN Application
 
-One stop shop to see the places YOU have been to - helping you make the daily choice to discover new places.
+One stop shop to see the places YOU love.
 
 <img src="assets/exploreImg.jpg">
 
 ## Idea:
 
-The base of the application will be a map with markers of the places you have visited:
-- *Those markers will have a pop-up with user and auto-generated information*
-- *This will include the name of the place, a category of the place (e.g. restaurant, bar, music venue, etc. A review of the place and an automatically generated date stamp.*
-- *The APP will use 2 APIs:*
+Users will pin their places based on address using the MapBox API.
+
+Use Cases:
+- People can use the application to track places they like (e.g. all their favorite restaurants)
+- Nonprofits and government agencies can create a centralized database of all partner agencies providing services to their clients.
+- Emergency Mode: Data store of all emergency services in a certain radius based on user location. (Code For America: Reimagining 911 | National Day of Civic Hacking)
+
+*Those markers will have a pop-up with user-generated information*
+*This will include the name of the place, a category of the place (e.g. restaurant, bar, music venue, etc.) and a user note.*
+*The APP will use 2 APIs:*
      - Geolocation API to generate a user location and center the map upon loading
      - MapBox (forward) Geocoding API to return the coordinates for a given address and to place the marker on the map.
-- *The APP will also use the MapBox GL JS open-source graphical library.*
+     - The APP will also use the MapBox GL JS open-source graphical library.
 
 ## Process:
 The user will enter an address to request coordinates from the MapBox Geocoding API to place markers on the map using the MapBox GL JS graphical library.
 
 ## Tech Stack:
-1. HTML, CSS, JS, Bootstrap, MapBox GL JS (Front-end)
-2. PostgreSQL and Sequelize, Node, Express, Geolocation API, MapBox Geocoding API (Back-end)
+1. HTML, CSS, JS, Bootstrap, MapBox GL JS, EJS
+2. PostgreSQL and Sequelize, Node, Express, Geolocation API, MapBox Geocoding API
+3. Authentication: Passport and Bcrypt
 
 ## Wireframe and ERD:
 
@@ -39,8 +46,8 @@ The user will enter an address to request coordinates from the MapBox Geocoding 
 3. User can comment on markers
 
 ## Stretch Goals
-1. APP can have users sign up and users can share markers with their connections and view their info (critical for sharing reviews)
-2. MAP can be clicked and create a mark via a reverse geocode API Request to turn coordinates into an address and store it for future reference.
+1. Users can view other users pins (critical for sharing reviews)
+2. MAP can be clicked to create a pin via a reverse geocode API Request to turn coordinates into an address and store it for future reference.
 3. Button that returns you to the current location once you move away from it.
 4. User can set the default styling for their map
 5. EMERGENCY MODE: ONLY displays emergency services for local Medical, Fire, Police facilities based on a database seeded from a web scraper.
