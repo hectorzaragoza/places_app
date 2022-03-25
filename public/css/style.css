@@ -1,5 +1,10 @@
-body {
-    background-color: lightblue;
+#intro {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    color: whitesmoke;
+    background-color: blueviolet;
+    font-weight: bold;
 }
 
 .navbar {
@@ -51,36 +56,5 @@ body {
 }
 
 .welcomeMessage {
-    text-align: center;
-}
-
-.createClassHeading {
-    text-align: center;
-}
-
-.addPlaceForm {
-    text-align: center;
-}
-
-.form-group {
-    margin: 1.2rem;
-}
-
-.savedPlaceContainer {
-    text-align: center;
-    margin: 1.5rem 0 2rem 21rem;
-    background-color: whitesmoke;
-    width: 50%;
-    border-radius: 1rem;
-    padding: 1rem;
-    padding-top: 1px;
-}
-
-.profileButtons {
-    display: inline;
-    margin: 0 10px 0 10px;
-}
-
-.addPlaceBtnContainer {
     text-align: center;
 }

@@ -1,38 +1,26 @@
-<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="../public/css/style.css">
 
-<h2 class="createClassHeading">Create a New Place</h2>
-<form class="addPlaceForm" action="/main/addplace" method="POST">
-    <div class="form-group">
-        <label for="name">Place Name: </label>
-        <input type="text" name="name" class="form-control" id="name">
-    </div>
-    <div class="form-group">
-        <label for="streetNumber">Street Number: </label>
-        <input type="text" name="streetNumber" class="form-control" id="streetNumber">
-    </div>
-    <div class="form-group">
-        <label for="streetName">Street Name: </label>
-        <input type="text" name="streetName" class="form-control" id="streetName">
-    </div>
-    <div class="form-group">
-        <label for="cityName">City: </label>
-        <input type="text" name="cityName" class="form-control" id="cityName">
-    </div>
-    <div class="form-group">
-        <label for="stateName">State: </label>
-        <input type="text" name="stateName" class="form-control" id="stateName">
-    </div>
-    <div class="form-group">
-        <label for="zipCode">Zip Code: </label>
-        <input type="text" name="zipCode" class="form-control" id="zipCode">
-    </div>
-    <div class="form-group">
-        <label for="category">Category: </label>
-        <input type="text" name="category" class="form-control" id="category">
-    </div>
-    <div class="form-group">
-        <label for="review">Review: </label>
-        <input type="text" name="review" class="form-control" id="review">
-    </div>
-    <input class="addPlaceSubmit" type="submit">
-</form>
+<div class="container mt-4" style="width: 50%;">
+    <h2 class="text-center">Create a New Place</h2>
+    <form class="container-fluid" action="/main/addplace" method="POST">
+        <div>
+            <label for="name">Place Name: </label>
+            <input type="text" name="name" class="form-control" id="name">
+            <label for="streetNumber">Street Number: </label>
+            <input type="text" name="streetNumber" class="form-control" id="streetNumber">
+            <label for="streetName">Street Name: </label>
+            <input type="text" name="streetName" class="form-control" id="streetName">
+            <label for="cityName">City: </label>
+            <input type="text" name="cityName" class="form-control" id="cityName">
+            <label for="stateName">State: </label>
+            <input type="text" name="stateName" class="form-control" id="stateName">
+            <label for="zipCode">Zip Code: </label>
+            <input type="text" name="zipCode" class="form-control" id="zipCode">
+            <label for="category">Category: </label>
+            <input type="text" name="category" class="form-control" id="category">
+            <label for="review">Review: </label>
+            <input type="text" name="review" class="form-control" id="review">
+        </div>
+        <input class="btn btn-primary mt-2" type="submit">
+    </form>
+</div>

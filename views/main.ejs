@@ -1,17 +1,24 @@
-<link rel="stylesheet" href="/static/css/style.css">
-<h1 class="welcomeMessage">Welcome home:</h1>
+<link rel="stylesheet" href="../public/css/style.css">
 
-<div class="addViewLinksContainer">
-    <a class="addViewLinks" href="/main/addplace"><button>Add a Place</button></a>
-    <a class="addViewLinks" href="/profile"><button>View Places</button></a>
+<div class="container mt-3">
+    <div class="container d-inline justify-content-center mt-4 text-center">
+        <h1 class="display-6">Welcome home:</h1>
+        <p class="lead">Add or view your favorites places!</p>
+    </div>
+    
+    <div class="container-sm d-flex justify-content-around" style="width: 50%">
+        <a href="/main/addplace"><button class="btn btn-primary" >Add a Place</button></a>
+        <a href="/profile"><button class="btn btn-primary">View Your Places</button></a>
+    </div>
+
+    <div id='map' class="mt-3" style='width: 100%; height: 500px;'></div>
 </div>
-<div id='map' style='width: 100%; height: 500px;'></div>
 
 
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-        const existingPlace = <%- JSON.stringify(existingPlaceData) %>
+        const existingPlace = <%- JSON.stringify(existingPlaceData) %>;
         //My MapBox Api.
         mapboxgl.accessToken = 'pk.eyJ1IjoicGxhY2VzLWFwcCIsImEiOiJja3Z2NWdidXpienpyMnZwZ3VtYXA5ZzZ3In0.xPD6PBPl3J-fosIjAtzYSQ'
         //Geolocation API to get user Location

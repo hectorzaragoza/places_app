@@ -59,7 +59,7 @@ app.use('/comment', require('./controllers/comment'))
 app.use('/profile', require('./controllers/profile'))
 
 
-// home route
+// Initial Landing Page ("Home")
 app.get('/', (req, res)=>{
     res.render('home')
 })

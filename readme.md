@@ -1,5 +1,5 @@
 
-# Project 2 - "Places" - Full Stack PEN Application
+# "Places" - Full Stack PEN Application
 
 One stop shop to see the places YOU have been to - helping you make the daily choice to discover new places.
 
@@ -7,9 +7,9 @@ One stop shop to see the places YOU have been to - helping you make the daily ch
 
 ## Idea:
 
-The base of the application will be a map with markers of the places you and your friends have visited:
+The base of the application will be a map with markers of the places you have visited:
 - *Those markers will have a pop-up with user and auto-generated information*
-- *This will include the name of the place, a category of the place (e.g. restaurant, bar, music venue, etc. (This will change the color of the marker on the map). A review of the place and an automatically generated date stamp.*
+- *This will include the name of the place, a category of the place (e.g. restaurant, bar, music venue, etc. A review of the place and an automatically generated date stamp.*
 - *The APP will use 2 APIs:*
      - Geolocation API to generate a user location and center the map upon loading
      - MapBox (forward) Geocoding API to return the coordinates for a given address and to place the marker on the map.
@@ -56,7 +56,7 @@ The user will enter an address to request coordinates from the MapBox Geocoding 
 - lastName (str)
 - userName (str)
 - password (str)
-- email (str))
+- email (str)
 2. Marker 
 - markerId (int)
 - name (str)
